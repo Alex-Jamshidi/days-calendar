@@ -1,9 +1,37 @@
 <!DOCTYPE html>
-<html>
-    <head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commemorative Calendar</title>
         <script type="module" src="common.mjs"></script>
         <script type="module" src="web.mjs"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@js-temporal/polyfill@0.4.4/dist/index.umd.production.min.js"></script>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <main>
+        <h1>Commemorative Calendar</h1>
+
+        <div class="controls">
+            <button id="prevBtn">Previous Month</button>
+            
+            <label for="monthJump">Month:</label>
+            <select id="monthJump"></select>
+
+            <label for="yearJump">Year:</label>
+            <select id="yearJump"></select>
+
+            <button id="nextBtn">Next Month</button>
+        </div>
+
+        <h2 id="currentMonthYear" aria-live="polite"></h2>
+
+        <div class="calendar-grid" id="calendarContainer" role="grid">
+            </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@js-temporal/polyfill@0.4.4/dist/index.umd.production.min.js"></script>
+    <script src="app.js"></script>
     </body>
 </html>
