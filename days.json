@@ -1,0 +1,37 @@
+[
+    {
+        "name": "Ada Lovelace Day",
+        "monthName": "October",
+        "dayName": "Tuesday",
+        "occurrence": "second",
+        "descriptionURL": "https://codeyourfuture.github.io/Checkpoint/days/ada.txt"
+    },
+    {
+        "name": "International Binturong Day",
+        "monthName": "May",
+        "dayName": "Saturday",
+        "occurrence": "second",
+        "descriptionURL": "https://codeyourfuture.github.io/Checkpoint/days/binturongs.txt"
+    },
+    {
+        "name": "International Vulture Awareness Day",
+        "monthName": "September",
+        "dayName": "Saturday",
+        "occurrence": "first",
+        "descriptionURL": "https://codeyourfuture.github.io/Checkpoint/days/vultures.txt"
+    },
+    {
+        "name": "International Red Panda Day",
+        "monthName": "September",
+        "dayName": "Saturday",
+        "occurrence": "third",
+        "descriptionURL": "https://codeyourfuture.github.io/Checkpoint/days/red-pandas.txt"
+    },
+    {
+        "name": "World Lemur Day",
+        "monthName": "October",
+        "dayName": "Friday",
+        "occurrence": "last",
+        "descriptionURL": "https://codeyourfuture.github.io/Checkpoint/days/lemurs.txt"
+    }
+]
