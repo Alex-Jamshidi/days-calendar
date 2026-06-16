@@ -1,4 +1,5 @@
 const { Temporal } = window;
+import { getFloatingDay } from './common.mjs';
 
 // 1. Initialize automatically to the current real-world Month and Year
 let currentYear = Temporal.Now.plainDateISO().year;
@@ -73,30 +74,7 @@ function handleJump() {
     updateCalendar();
 }
 
-/**
- * Calculates rule occurrences using Temporal PlainDate math
- */
-function getFloatingDay(year, monthIndex, dayName, occurrence) {
-    const dayMap = { Monday: 1, Tuesday: 2, Wednesday: 3, Thursday: 4, Friday: 5, Saturday: 6, Sunday: 7 };
-    const targetDayOfWeek = dayMap[dayName];
 
-    if (occurrence === "last") {
-        let date = Temporal.PlainDate.from({ year, month: monthIndex, day: 1 });
-        date = date.with({ day: date.daysInMonth });
-        while (date.dayOfWeek !== targetDayOfWeek) {
-            date = date.subtract({ days: 1 });
-        }
-        return date.day;
-    } else {
-        let date = Temporal.PlainDate.from({ year, month: monthIndex, day: 1 });
-        while (date.dayOfWeek !== targetDayOfWeek) {
-            date = date.add({ days: 1 });
-        }
-        const occurrenceMap = { first: 1, second: 2, third: 3, fourth: 4 };
-        date = date.add({ weeks: occurrenceMap[occurrence] - 1 });
-        return date.day;
-    }
-}
 function updateCalendar() {
     document.getElementById("monthJump").value = currentMonth;
     document.getElementById("yearJump").value = currentYear;
