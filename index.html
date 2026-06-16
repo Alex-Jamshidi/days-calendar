@@ -1,9 +1,33 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <script type="module" src="common.mjs"></script>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commemorative Calendar</title>
         <script type="module" src="web.mjs"></script>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
+<main>
+        <h1>Commemorative Calendar</h1>
+
+        <div class="controls">
+            <button id="prevBtn" aria-label="Previous Month">‹‹ Previous Month</button>
+            
+            <label for="monthJump">Month</label>
+            <select id="monthJump"></select>
+
+            <label for="yearJump">Year</label>
+            <select id="yearJump"></select>
+
+            <button id="nextBtn" aria-label="Next Month">Next Month ››</button>
+        </div>
+
+        <h2 id="currentMonthYear" aria-live="polite"></h2>
+
+        <div class="calendar-grid" id="calendarContainer" role="grid">
+            </div>
+    </main>
+    
     </body>
 </html>
