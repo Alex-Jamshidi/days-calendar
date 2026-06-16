@@ -3,5 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "test": "node common.test.mjs"
+  },
+  "dependencies": {
+    "@js-temporal/polyfill": "^0.5.1"
   }
 }
